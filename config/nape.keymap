@@ -108,12 +108,6 @@
         // レイヤー1（時計回り45°）
         // レイヤー2（時計回り90°）
 
-        default_layer {
-            bindings = <
-&lt_mkp 1 MB3  &lt_mkp 4 MB1  &lt_mkp 4 MB2  &mo 1  &mo 2  &mo 0
-            >;
-        };
-
         btsel_layer {
             bindings = <
 &trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 0  &bt BT_SEL 3  &bt BT_SEL 4
@@ -123,6 +117,12 @@
         btclr_layer {
             bindings = <
 &none  &none  &none  &bt BT_CLR  &none  &bt BT_CLR_ALL
+            >;
+        };
+
+        default_layer {
+            bindings = <
+&lt_mkp 0 MB3  &lt_mkp 0 MB1  &lt_mkp 0 MB2  &mo 0  &mo 1  &mo 3
             >;
         };
 
@@ -155,7 +155,7 @@
         // Key1、2同時押しでスクロールレイヤーへ
 
         combo_layer9 {
-            bindings = <&mo 0>;
+            bindings = <&mo 3>;
             key-positions = <1 2>;
             timeout-ms = <50>;
         };
